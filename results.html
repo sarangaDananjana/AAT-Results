@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo-placeholder img {
+            width: 150px;
+            /* Set a fixed width for the logo */
+            height: auto;
+            /* Automatically adjust height to maintain aspect ratio */
+            max-width: 100%;
+            /* Ensures the logo doesn’t exceed the container's width */
+        }
+
+        .title {
+            font-size: 28px;
+            color: #00468b;
+            margin-top: 20px;
+        }
+
+        .exam-results {
+            margin-top: 20px;
+        }
+
+        .exam-results h2 {
+            font-size: 24px;
+            color: #00468b;
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .results-table th,
+        .results-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .results-table th {
+            background-color: #f2f2f2;
+            color: #00468b;
+            text-align: left;
+        }
+
+        .results-table td {
+            text-align: center;
+        }
+
+        .print-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #7b3f98;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background-color: #5a2d71;
+        }
+
+        /* Responsive design for smaller screens */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .title {
+                font-size: 22px;
+            }
+
+            .logo-placeholder img {
+                width: 120px;
+                /* Make the logo a bit smaller for small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">
+                <!-- Your logo image -->
+                <img src="aat_logo.png" alt="AAT Logo">
+            </div>
+            <h1 class="title">Exam Results</h1>
+        </header>
+
+        <div class="exam-results">
+            <h2>July 2024 Examination</h2>
+            <p><strong>Student Name:</strong> A.G.K.M.M.G.T.R. Gamakumara</p>
+            <p><strong>Registration No.:</strong> 3937969</p>
+            <p><strong>Index No.:</strong> 06636</p>
+
+            <h3>Results - Level I: Pass</h3>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Subject No.</th>
+                        <th>Subject Name</th>
+                        <th>Grade</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Financial Accounting</td>
+                        <td>S</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Business Mathematics & Statistics</td>
+                        <td>A</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td>103</td>
+                        <td>Economics</td>
+                        <td>B</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td>104</td>
+                        <td>Business Environment</td>
+                        <td>A</td>
+                        <td>Pass</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Results - Talent Subject</h3>
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Subject No.</th>
+                        <th>Subject Name</th>
+                        <th>Grade</th>
+                        <th>Results</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>310</td>
+                        <td>Business Communication (English)</td>
+                        <td>-</td>
+                        <td>To be Completed</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Grades:<br>
+                A - Excellent | B - Very Good | C - Good | D - Marginal | W - Weak | E - Bad Failure
+            </p>
+
+            <!-- Print Button -->
+            <button class="print-button" onclick="window.print()">Print Results</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

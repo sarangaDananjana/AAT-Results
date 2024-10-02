@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Results - AAT Sri Lanka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .logo-placeholder img {
+            width: 150px;
+            /* Fixed width for the logo */
+            height: auto;
+            /* Keeps aspect ratio */
+            max-width: 100%;
+            /* Prevents logo from overflowing */
+        }
+
+        .input-field {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #7b3f98;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5a2d71;
+        }
+
+        .error-message {
+            color: red;
+            display: none;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .logo-placeholder img {
+                width: 120px;
+                /* Make the logo smaller on smaller screens */
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="logo-placeholder">
+            <img src="aat_logo.png" alt="AAT Logo">
+        </div>
+        <h1>Exam Results</h1>
+
+        <div class="input-field">
+            <form id="resultsForm" onsubmit="return validateInput()">
+                <input type="text" id="indexNumber" placeholder="Enter your AAT Registration No. / Index Number"
+                    required>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+            <p class="error-message" id="errorMessage">Invalid AAT Registration No. or Index Number. Please try again.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript validation and redirection
+        function validateInput() {
+            // Get the entered index number
+            var indexNumber = document.getElementById("indexNumber").value;
+
+            // List of valid numbers (you can add more here as needed)
+            var validNumbers = ["3937969", "06636"];
+
+            // Check if the entered number is in the valid numbers list
+            if (validNumbers.includes(indexNumber)) {
+                // Redirect to the results page
+                window.location.href = "results.html";
+                return false; // Prevent default form submission
+            } else {
+                // Show an error message if the number is invalid
+                document.getElementById("errorMessage").style.display = "block";
+                return false; // Prevent default form submission
+            }
+        }
+    </script>
+
+</body>
+
+</html>
